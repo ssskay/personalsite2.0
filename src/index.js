@@ -1,13 +1,20 @@
 import './style.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import {
+  BrowserRouter as Router, Route, NavLink, Switch,
+} from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import reducers from './reducers';
+import Counter from './components/counter';
+import Controls from './components/controls';
 
 const About = (props) => {
-  return <div> All there is to know about me </div>;
+  return <div> <h2> page about me! </h2>  </div>;
 };
 const Welcome = (props) => {
-  return <div>Welcome</div>;
+  return <div> <Nav /> <Counter />  <Controls /></div>;
 };
 
 const Nav = (props) => {
@@ -27,18 +34,32 @@ const Test = (props) => {
   return <div> ID: {props.match.params.id} </div>;
 };
 
+const FallBack = (props) => {
+  return <div>URL Not Found</div>;
+};
+
 const App = (props) => {
   return (
     <Router>
-      <div>
-        <Nav />
-        <Route exact path="/test/:id" component={Test} />
-        <Route exact path="/" component={Welcome} />
+      <Switch>
+        <Route path="/" component={Welcome} />
         <Route path="/about" component={About} />
-      </div>
+        <Route exact path="/test/:id" component={Test} />
+        <Route component={FallBack} />
+      </Switch>
     </Router>
   );
 };
 
 
-ReactDOM.render(<App />, document.getElementById('main'));
+const store = createStore(reducers, {}, compose(
+  applyMiddleware(),
+  window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => f,
+));
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('main'),
+);
