@@ -42,8 +42,8 @@ const App = (props) => {
   return (
     <Router>
       <Switch>
-        <Route path="/" component={Welcome} />
-        <Route path="/about" component={About} />
+        <Route exact path="/" component={Welcome} />
+        <Route exact path="/about" component={About} />
         <Route exact path="/test/:id" component={Test} />
         <Route component={FallBack} />
       </Switch>
