@@ -1,7 +1,26 @@
 const state = {
+  idea: 0,
   head: 0,
   body: 0,
 };
+
+
+const ideaPics = [
+  'Pictures/Idea/arblee.png',
+  'Pictures/Idea/coda.png',
+  'Pictures/Idea/officehours.png',
+  'Pictures/Idea/zoomu.png',
+  'Pictures/Idea/studykit.png'
+];
+
+const ideaDescrip = [
+  'ARblee - Consulting retailers to use augmented reality in their physical storefronts to draw people in; arose from Pokemon Go! hype, currently disbanded since retail is dying',
+  'Cult of Dope Automations - I love everything super cute, like alpacas, pink, poros (on the heart), and my boyfriend! I got this super cute icon commissioned for me and him for Valentines Day <3',
+  'Office Hours - I can be professional if I need to! (even though this is the only professional headshot I have, from my junior year function 4 years ago)',
+  'Zoom University - I love everything super cute, like alpacas, pink, poros (on the heart), and my boyfriend! I got this super cute icon commissioned for me and him for Valentines Day <3',
+  'Study Kit - I can be professional if I need to! (even though this is the only professional headshot I have, from my junior year function 4 years ago)',
+];
+
 
 const headPics = [
   'Pictures/Head/chibi.jpeg',
@@ -23,6 +42,41 @@ const bodyDescrip = [
   'I love working from home in comfort',
 ];
 
+
+
+
+
+function newIdea() {
+  let fullIdeaDescription = 'Startup: ';
+  fullIdeaDescription += ideaDescrip[state.idea];
+  const output = document.getElementById('Idea Description');
+  output.innerHTML = fullIdeaDescription;
+}
+
+function loadIdea() {
+  const img = `<img src="${ideaPics[state.idea]}">`;
+  const output = document.getElementById('Idea Image');
+  output.innerHTML = img;
+}
+
+function updateIdeaRight() {
+  state.idea += 1;
+  if (state.idea > ideaPics.length - 1) {
+    state.idea = 0;
+  }
+  newIdea();
+  loadIdea();
+}
+
+function updateIdeaLeft() {
+  state.idea -= 1;
+  if (state.idea < 0) {
+    state.idea = ideaPics.length - 1;
+  }
+  newIdea();
+  loadIdea();
+}
+
 function newHead() {
   let fullHeadDescription = 'head: ';
   fullHeadDescription += headDescrip[state.head];
@@ -43,7 +97,6 @@ function updateHeadRight() {
   }
   newHead();
   loadHead();
-  console.log(state.head);
 }
 
 function updateHeadLeft() {
@@ -68,6 +121,24 @@ function loadBody() {
   output.innerHTML = img;
 }
 
+function updateBodyRight() {
+  state.body += 1;
+  if (state.body > bodyPics.length - 1) {
+    state.body = 0;
+  }
+  newBody();
+  loadBody();
+}
+
+function updateBodyLeft() {
+  state.body -= 1;
+  if (state.body < 0) {
+    state.body = bodyPics.length - 1;
+  }
+  newBody();
+  loadBody();
+}
+
 function init() {
   console.log('window has loaded');
   state.head = Math.floor(Math.random() * (headPics.length));
@@ -76,6 +147,8 @@ function init() {
   loadHead();
   newBody();
   loadBody();
+  newIdea();
+  loadIdea();
 }
 
 window.onload = init;
