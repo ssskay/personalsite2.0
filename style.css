@@ -55,7 +55,7 @@ div{
 
 .body{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }   
 
 .display{
@@ -116,7 +116,7 @@ nav{
 
 .internal-display{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     float: left;
     border: 3px solid #ccc;
     border-radius: 10px;
