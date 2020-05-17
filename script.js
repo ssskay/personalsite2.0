@@ -2,6 +2,7 @@ const state = {
   idea: 0,
   head: 0,
   body: 0,
+  acc:0,
 };
 
 
@@ -42,6 +43,13 @@ const bodyDescrip = [
   'I love working from home in comfort',
 ];
 
+const accPics = [
+  'Pictures/body/bathrobe.png',
+];
+
+const accDescrip = [
+  "My lit baby, he's quite cute",
+];
 
 
 
@@ -139,16 +147,51 @@ function updateBodyLeft() {
   loadBody();
 }
 
+function newAcc() {
+  let fullAccDescription = 'body: ';
+  fullAccDescription += accDescrip[state.head];
+  const output = document.getElementById('Accessory Description');
+  output.innerHTML = fullAccDescription;
+}
+
+function loadAcc() {
+  const img = `<img src="${accPics[state.acc]}">`;
+  const output = document.getElementById('Accessory Image');
+  output.innerHTML = img;
+}
+
+function updateAccRight() {
+  state.acc += 1;
+  if (state.acc > accPics.length - 1) {
+    state.acc = 0;
+  }
+  newAcc();
+  loadAcc();
+}
+
+function updateAccLeft() {
+  state.acc -= 1;
+  if (state.acc < 0) {
+    state.acc = accPics.length - 1;
+  }
+  newAcc();
+  loadAcc();
+}
+
 function init() {
   console.log('window has loaded');
+  state.idea = Math.floor(Math.random() * (ideaPics.length));
   state.head = Math.floor(Math.random() * (headPics.length));
   state.body = Math.floor(Math.random() * (bodyPics.length));
+  state.acc = Math.floor(Math.random() * (accPics.length));
   newHead();
   loadHead();
   newBody();
   loadBody();
   newIdea();
   loadIdea();
+  newAcc();
+  loadAcc();
 }
 
 window.onload = init;
