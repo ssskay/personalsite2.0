@@ -44,9 +44,9 @@ const headResults = [
 ]
 
 const bodyPics = [
-  'Pictures/body/bathrobe.png',
-  'Pictures/body/canadagoose.jpg',
-  'Pictures/body/magicalgirl.png',
+  'Pictures/Body/bathrobe.png',
+  'Pictures/Body/canadagoose.jpg',
+  'Pictures/Body/magicalgirl.png',
 ];
 
 const bodyDescrip = [
@@ -56,10 +56,10 @@ const bodyDescrip = [
 ];
 
 const accPics = [
-  'Pictures/acc/litbaby.jpeg',
-  'Pictures/acc/beats.png',
-  'Pictures/acc/switch.png',
-  'Pictures/acc/laptop.png',
+  'Pictures/Acc/litbaby.jpeg',
+  'Pictures/Acc/beats.png',
+  'Pictures/Acc/switch.png',
+  'Pictures/Acc/laptop.png',
 ];
 
 const accDescrip = [
