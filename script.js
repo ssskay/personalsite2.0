@@ -38,6 +38,11 @@ const headDescrip = [
 
 ];
 
+const headResults = [
+  "Here's a link to my Instagram which mostly just consists of cute anime-related content of me and friends/family: ",
+  "Here's a link to my LinkedIn, which has professional content: ",
+]
+
 const bodyPics = [
   'Pictures/body/bathrobe.png',
   'Pictures/body/canadagoose.jpg',
@@ -186,22 +191,21 @@ function updateAccLeft() {
 }
 
 function init() {
+  ('#results.hide')
   state.idea = Math.floor(Math.random() * (ideaPics.length));
   state.head = Math.floor(Math.random() * (headPics.length));
   state.body = Math.floor(Math.random() * (bodyPics.length));
   state.acc = Math.floor(Math.random() * (accPics.length));
+  newIdea();
+  loadIdea();
   newHead();
   loadHead();
   newBody();
   loadBody();
-  newIdea();
-  loadIdea();
   newAcc();
   loadAcc();
 }
 
-function saraResults(){
-  console.log("success!");
-}
+
 
 window.onload = init;
