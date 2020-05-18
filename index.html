@@ -27,24 +27,28 @@
         <div class = "flare-image">
             <img src="Pictures/AboutMe/flare.png" alt="Flare" class="profile">
         </div>
+       <div id="metext">
+            <h2>
+            <strong>Website Blurb:</strong> I was very indecisive about what side of myself to showcase in this site.
+            So I figured, why not let you decide? I'm also very eccentric and wanted to have some fun with
+            making my site as unique and custom to me as possible :D
+            </h2> 
+            <h3>
+            Choose your own Sara Kay experience below with the arrows in the right. Once you've built a Sara that you want to learn more about, hit the submit button for more information
+            about me based on your selections.
+            </h3>
+
+       </div>
        
-        <h2>
-        <strong>Website Blurb:</strong> I was very indecisive about what side of myself to showcase in this site.
-        So I figured, why not let you decide? 
-        </h2> 
-        <h3>
-        Customize your own Sara Kay experience below with the arrows in the right. Once you've built a Sara that you want to learn more about, hit the submit button for more information
-        about me.
-        </h3>
      
     </div>
     <hr>
 
 
     <div class= "body-header">
-        <h1>
+        <h2>
             Build a Sara to learn more about me!
-        </h1>
+        </h2>
         
     </div>
 
@@ -61,14 +65,16 @@
             <div id = "Idea Image">
             </div>
             <div class = "button-controls">
-                <input type="button" value="<" onclick="updateIdeaLeft()">
-                <input type="button" value=">" onclick="updateIdeaRight()">
+                <input type="button" value="<" class="btn btn-outline-success" onclick="updateIdeaLeft()">
+                <input type="button" value=">" class="btn btn-outline-success" onclick="updateIdeaRight()">
             </div>
         </div>
 
-        <h3>
-            What's your outward impression of me?
-        </h3>
+        <div class = "question">
+                <h3>
+                    What's your outward impression of me?
+                </h3>
+            </div>
 
         <div class="internal-display">
                 <div id = "Head Description">  
@@ -76,13 +82,15 @@
                 <div id = "Head Image">
                     </div>
                     <div class = "button-controls">
-                        <input type="button" value="<" onclick="updateHeadLeft()">
-                        <input type="button" value=">" onclick="updateHeadRight()">
+                        <input type="button" class="btn btn-outline-success" value="<" onclick="updateHeadLeft()">
+                        <input type="button" class="btn btn-outline-success" value=">" onclick="updateHeadRight()">
                     </div>
         </div>
-        <h3>
-            Where am I?
-        </h3>
+        <div class = "question">
+                <h3>
+                   Where am I?
+                </h3>
+            </div>
 
         <div class="internal-display">
                 <div id = "Body Description">  
@@ -90,21 +98,36 @@
                 <div id = "Body Image">
                     </div>
                     <div class = "button-controls">
-                        <input type="button" value="<" onclick="updateBodyLeft()">
-                        <input type="button" value=">" onclick="updateBodyRight()">
+                        <input type="button" class="btn btn-outline-success" value="<" onclick="updateBodyLeft()">
+                        <input type="button" class="btn btn-outline-success" value=">" onclick="updateBodyRight()">
                     </div>
         </div>
 
+        <div class = "question">
+            <h3>
+                What's in my hand?
+            </h3>
+        </div>
         <div class="internal-display">
+            
                 <div id = "Accessory Description">  
                 </div>
                 <div id = "Accessory Image">
                     </div>
                     <div class = "button-controls">
-                        <input type="button" value="<" onclick="updateAccLeft()">
-                        <input type="button" value=">" onclick="updateAccRight()">
+                        <input  type="button" class="btn btn-outline-success" value="<" onclick="updateAccLeft()">
+                        <input type="button" class="btn btn-outline-success" value=">" onclick="updateAccRight()">
                     </div>
         </div>
+        <div id = "submit-area">
+            <button id = "done-button" class = "btn-primary btn-lg btn-block" onclick="saraResults()">
+                Click here for personalized Sara content below
+            </button>
+        </div>
+        <div id = "results">
+
+        </div>
+
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

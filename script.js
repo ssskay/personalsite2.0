@@ -51,14 +51,17 @@ const bodyDescrip = [
 ];
 
 const accPics = [
-  'Pictures/body/bathrobe.png',
+  'Pictures/acc/litbaby.jpeg',
+  'Pictures/acc/beats.png',
+  'Pictures/acc/switch.png',
+  'Pictures/acc/laptop.png',
 ];
 
 const accDescrip = [
   "<strong>Flare:</strong> My baby plush alpaca who I share with my boyfriend. Debugging bff. He's the cutest lit baby ever",
-  "<strong>Beats Headphones:</strong> You will literally never see me without these on. I need music to survive in the outside world. Playlists range from anime soundtracks to K-pop and classic jazz",
+  "<strong>Beats Headphones:</strong> You will literally never see me without these on. If you need new chill beats to study to, hit me up. Playlists range from anime soundtracks to K-pop and classic jazz",
   "<strong>Nintendo Switch:</strong> Would you believe me if I told you that I've met most of my friends at Dartmouth through defeating them in Super Smash Bros?",
-  "<strong>My laptop:</strong> Am I streaming chill beats to study to, designing new stickers or coding dope projects for DALI? Hire me to find out ;)",
+  "<strong>My laptop:</strong> Am I streaming chill beats to study to, designing new stickers or coding dope projects for DALI? Hire me to find out ;) 90% of stickers on my laptop were made by me!",
 ];
 
 
@@ -183,7 +186,6 @@ function updateAccLeft() {
 }
 
 function init() {
-  console.log('window has loaded');
   state.idea = Math.floor(Math.random() * (ideaPics.length));
   state.head = Math.floor(Math.random() * (headPics.length));
   state.body = Math.floor(Math.random() * (bodyPics.length));
@@ -196,6 +198,10 @@ function init() {
   loadIdea();
   newAcc();
   loadAcc();
+}
+
+function saraResults(){
+  console.log("success!");
 }
 
 window.onload = init;
