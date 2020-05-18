@@ -206,6 +206,4 @@ function init() {
   loadAcc();
 }
 
-
-
 window.onload = init;
