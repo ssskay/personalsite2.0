@@ -38,11 +38,6 @@ const headDescrip = [
 
 ];
 
-const headResults = [
-  "Here's a link to my Instagram which mostly just consists of cute anime-related content of me and friends/family: ",
-  "Here's a link to my LinkedIn, which has professional content: ",
-]
-
 const bodyPics = [
   'Pictures/body/bathrobe.png',
   'Pictures/body/canadagoose.jpg',
