@@ -15,3 +15,29 @@
 
     ]
 }
+
+
+function loadBase() {
+    const img = `<img src="${basePics[state.base]}">`;
+    const output = document.getElementById('Base Image');
+    output.innerHTML = img;
+  }
+  
+  function updateBaseRight() {
+    state.base += 1;
+    if (state.base > basePics.length - 1) {
+      state.base = 0;
+    }
+    newBase();
+    loadBase();
+    console.log(state.base);
+  }
+  
+  function updateBaseLeft() {
+    state.base -= 1;
+    if (state.base < 0) {
+      state.base = basePics.length - 1;
+    }
+    newBase();
+    loadBase();
+  }
