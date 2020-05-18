@@ -55,7 +55,7 @@ const accPics = [
 ];
 
 const accDescrip = [
-  "<strong>Flare:</strong> My baby plush alpaca who I share with my boyfriend. Debugging bff. He's the cutest lit baby ever",
+  "<strong>Flare:</strong> My baby plush alpaca who I share with my boyfriend. Debugging bff. He's the cutest lit baby ever. Follow him @feimeitan on TikTok",
   "<strong>Beats Headphones:</strong> You will literally never see me without these on. I need music to survive in the outside world. Playlists range from anime soundtracks to K-pop and classic jazz",
   "<strong>Nintendo Switch:</strong> Would you believe me if I told you that I've met most of my friends at Dartmouth through defeating them in Super Smash Bros?",
   "<strong>My laptop:</strong> Am I streaming chill beats to study to, designing new stickers or coding dope projects for DALI? Hire me to find out ;)",
